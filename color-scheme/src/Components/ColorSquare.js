@@ -8,10 +8,18 @@ class ColorSquare extends Component {
 
 
     render() {
+        const {name, background} = this.props
         return(
-            <div style={{ background: this.props.background }}className='ColorSquare'>
-                <span>{this.props.name}</span>
-                <span>MORE</span>
+            <div style={{ background }}className='ColorSquare'>
+                <div className='copy-container'>
+                    <div className='square-content'>
+                        <span>{ name }</span>
+                    </div>
+                    <button className='copy-button'>
+                        Copy
+                    </button>
+                </div>
+                <span className='more'>More</span> 
             </div>
         )
     };
