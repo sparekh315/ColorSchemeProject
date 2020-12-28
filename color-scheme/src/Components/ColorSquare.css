@@ -1,0 +1,8 @@
+.ColorSquare {
+    /* this width makes 5 boxes across, and this height makes 4 rows of boxes */
+    width: 20%;
+    height: 25%;
+    margin: 0 auto;
+    display: inline-block;
+    cursor: pointer;
+}
