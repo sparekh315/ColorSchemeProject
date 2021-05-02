@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import ColorSquare from './ColorSquare';
+import 'rc-slider/assets/index.css';
 import './ColorPalette.css'
 import Slider from 'rc-slider';
-import 'rc-slider/assets/index.css';
 
 
 class ColorPalette extends Component {
@@ -24,13 +24,15 @@ class ColorPalette extends Component {
         });
         return(
             <div className='ColorPalette'>
-                <Slider 
-                    defaultValue={level} 
-                    min={100} 
-                    max={900}
-                    step={100}
-                    onAfterChange={this.changeLevel}
+                <div className='slider-container'>
+                    <Slider 
+                        defaultValue={level} 
+                        min={100} 
+                        max={900}
+                        step={100}
+                        onAfterChange={this.changeLevel}
                 />
+                </div>
                 <div className='Palette-colors'>
                     {colorSquares}
                 </div>
